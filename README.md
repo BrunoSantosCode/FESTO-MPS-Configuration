@@ -4,15 +4,15 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 ## 📌 System Overview
 
-**FESTO MPS** &emsp; ➡️ cable ➡️ &emsp; **PLC** &emsp; ➡️ Modbus ➡️ &emsp; **Raspberry Pi (CODESYS)** &emsp; ➡️ OPC UA ➡️ &emsp; **Dinasore (4DIAC-IDE)**
+- **FESTO MPS** &emsp; ➡️ cable ➡️ &emsp; **PLC** &emsp; ➡️ Modbus ➡️ &emsp; **Raspberry Pi (CODESYS)** &emsp; ➡️ OPC UA ➡️ &emsp; **Dinasore (4DIAC-IDE)**
 
 ---
 
 ## ⚡ Quick Start: Automatic Operation
 
-If everything is functioning correctly, no configuration is required! Simply **connect the factory system to power**, and everything should **run automatically**.
+- If everything is functioning correctly, no configuration is required! Simply **connect the factory system to power**, and everything should **run automatically**.
 
-However, if there is an issue with the **PLC** or **Raspberry Pi**, check the configuration steps below.
+- However, if there is an issue with the **PLC** or **Raspberry Pi**, check the configuration steps below.
 
 ---
 
@@ -20,17 +20,17 @@ However, if there is an issue with the **PLC** or **Raspberry Pi**, check the co
 
 ### 🔲 Model: 
 
-Schneider ❓❓❓
+- Schneider ❓❓❓
 
 ### 🔐 Access
 
-The communication is established via a blue interface cable with a **DIN plug**. This cable contains an FTDI chip which requires the **CH340 Driver (USB to Serial)**. For any assistance, contact **Daniel** from I004.
+- The communication is established via a blue interface cable with a **DIN plug**. This cable contains an FTDI chip which requires the **CH340 Driver (USB to Serial)**. For any assistance, contact **Daniel** from I004.
 
-Communication with the PLC is handled through the **UNITELWAY Driver**.
+- Communication with the PLC is handled through the **UNITELWAY Driver**.
 
 ### 🖥️ Setup and Programming 
 
-To configure the PLC, you'll need to use **PL7 Pro** (an older Schneider IDE for Telemecanique PLCs).
+- To configure the PLC, you'll need to use **PL7 Pro** (an older Schneider IDE for Telemecanique PLCs).
 
 1. Identify the **Comm Port number (COMXX)** in the device manager.
 2. Open **PL7 Pro** and navigate to:
@@ -48,7 +48,7 @@ To configure the PLC, you'll need to use **PL7 Pro** (an older Schneider IDE for
 
 ### 🔲 Model: 
 
-Raspberry Pi 4
+- Raspberry Pi 4
 
 ### 🔐 Access
 - **IP**: `192.168.0.100` (This IP must be **192.168.0.100** due to PLC configuration, which whitelists MODBUS communication for this address. **Where exactly is this whitelisting configured❓**)
@@ -61,7 +61,7 @@ Raspberry Pi 4
    ```
 
 ### 🖥️ Programming
-The Raspberry Pi is configured with a **CODESYS project**. The project can be found [here](https://github.com/DIGI2-FEUP/TF4iM/blob/main/controller/factorisDemoController.project).
+- The Raspberry Pi is configured with a **CODESYS project**. The project can be found [here](https://github.com/DIGI2-FEUP/TF4iM/blob/main/controller/factorisDemoController.project).
 
 - **CODESYS Login**: 
   - Username: `admin`
@@ -81,11 +81,11 @@ The Raspberry Pi is configured with a **CODESYS project**. The project can be fo
 
 #### 1.1 Add Function Blocks
 
-Copy your function blocks (`.fbt` and `.py` files) to the Dinasore resources directory `dinasore-2.0/resources/function_blocks/`
+- Copy your function blocks (`.fbt` and `.py` files) to the Dinasore resources directory `dinasore-2.0/resources/function_blocks/`
 
 #### 1.2 Navigate to the Dinasore Directory
 
-Open your terminal or command prompt and change to the Dinasore directory:
+- Open your terminal or command prompt and change to the Dinasore directory:
 
  ```bash
  cd /path/to/dinasore-2.0
@@ -93,7 +93,7 @@ Open your terminal or command prompt and change to the Dinasore directory:
 
 #### 1.3 Execute Dinasore
 
-Start the Dinasore application by running:
+- Start the Dinasore application by running:
 
  ```bash
  python3 core/main.py
@@ -103,36 +103,36 @@ Start the Dinasore application by running:
 
 #### 2.1 Launch Workspace
 
-Open 4DIAC-IDE and click `Launch` to launch the default workspace
+- Open 4DIAC-IDE and click `Launch` to launch the default workspace
 
 #### 2.2 Create a New System
 
-Chose `Create New System` option, then enter the `<workspace_name>` and click `Finish`
+- Chose `Create New System` option, then enter the `<workspace_name>` and click `Finish`
 
 #### 2.3 Create the System Configuration
 
-Copy the function blocks (`.fbt` and `.py` files) to the 4DIAC workspace `4diac-ide-1.11/4diac-ide/workspace/<workspace_name>/<fb_folder_name>/`
+- Copy the function blocks (`.fbt` and `.py` files) to the 4DIAC workspace `4diac-ide-1.11/4diac-ide/workspace/<workspace_name>/<fb_folder_name>/`
 
 📝 Note: You may need to restart the 4DIAC-IDE in order to the new function blocks appear in the Pallete.
 
 #### 2.4 Create the System Configuration
 
-Open the `System Configuration` tab and build the following schematic using the components in the Pallete:
+- Open the `System Configuration` tab and build the following schematic using the components in the Pallete:
 
 ![system_conf](https://github.com/user-attachments/assets/3a492057-6bf1-4bc0-9926-caf9315dd2d5)
 
 #### 2.5 Create the Main Application using the Function Blocks
 
-Open the `<workspace_name>App` tab and build your main aplication using the components added before to the Pallete, as in the following example:
+- Open the `<workspace_name>App` tab and build your main aplication using the components added before to the Pallete, as in the following example:
 
 ![4diac_app](https://github.com/user-attachments/assets/ef5c3480-b41e-45a0-a6a5-b69ba3656515)
 
 📝 Note: don't forget to correctly set all the needed function blocks inputs
 
-After building the application, the function blocks need to be mapped, for this: right-click on the block -> `Map to ...` -> `RaspberryPI` -> `EMB_RES`
+- After building the application, the function blocks need to be mapped, for this: right-click on the block -> `Map to ...` -> `RaspberryPI` -> `EMB_RES`
 
 📝 Note: The system variables state can be seen in real time by clicking in `Debug` -> `Debug System` -> `<workspace_name>` and then right-clicking a function block -> `🔍 Watch`
 
 #### 2.6 Deploy the System
 
-Deploy the system by right-clicking the `<workspace_name>` in the left tab and then click `Deploy`
+- Deploy the system by right-clicking the `<workspace_name>` in the left tab and then click `Deploy`
