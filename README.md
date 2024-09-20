@@ -38,7 +38,7 @@ This guide explains how to set up and configure the FESTO MPS system.
      
 2. Open **PL7 Pro** and navigate to:
    
-   - `PLC` ➡️ `Define PLC Address` ➡️ `Options` ➡️ `Configuration of the driver` ➡️ `UNITELWAY Driver` ➡️ `Configuration`
+   - `PLC` -> `Define PLC Address` -> `Options` -> `Configuration of the driver` -> `UNITELWAY Driver` -> `Configuration`
      
    - Change the port to match the **Comm Port number** from the device manager.
      
