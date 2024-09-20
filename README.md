@@ -32,7 +32,7 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 ### 🔲 Model: 
 
-- Schneider ❓❓❓
+- Schneider (check specific model - TO BE DONE❗️)
 
 
 ### 🔐 Access
@@ -59,9 +59,15 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 ### 🌐 Communication 
 
+- The physical IN/OUTPUTS from FESTO MPS to PLC mapping is available in this [Excel](https://github.com/DIGI2-FEUP/TF4iM/blob/main/festo/Mapeamento_IOs.xlsx).
+
 - The PLC is configured to run on `192.168.0.10`
   
-- It hosts a **MODBUS server** which maps all inputs and outputs to REGISTERS. The mapping is available in the CODESYS Project (**where exactly❓**).
+- It hosts a **MODBUS TCP/IP server** (port 502) which maps all inputs and outputs to IB/QB.
+
+- This mapping is available in the CODESYS Project at: `Device` -> `Ethernet` -> `Modbus_TCP_Master` -> `Modbus_TCP_Slave` -> `ModbusTCPSlave I/O Mapping`
+
+📝 Note: If the PCL needs to be changed, both the **PL7 Pro** program and the **`.stx`** project must be substituted, as they are specific to the currently installed PLC.
 
 ---
 
@@ -76,7 +82,7 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 - **IP**: `192.168.0.100`
   
-     📝 Note: this IP must be `192.168.0.100` due to PLC configuration, which whitelists MODBUS communication for this address. **Where exactly is this whitelisting configured❓**)
+     📝 Note: this IP must be `192.168.0.100` due to PLC configuration, which whitelists MODBUS communication for this address.
   
 - **Alternative IP**: `10.227.17.233` or `mpscontroller.local`
   
@@ -92,21 +98,41 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 ### 🖥️ Programming
 
+- The Raspberry Pi must be running CODESYS RUNTIME and should be configured as in the following image:
+
+![image](https://github.com/user-attachments/assets/773e8ba3-7eee-4c5b-8bbe-8f901966131d)
+
 - The Raspberry Pi is configured with a **CODESYS project**. The project can be found [here](https://github.com/DIGI2-FEUP/TF4iM/blob/main/controller/factorisDemoController.project).
 
-- **CODESYS Login**: 
-  - Username: `admin`
-  - Password: `raspberry`
-    
-- The variable mapping is available in this [Excel file](https://github.com/DIGI2-FEUP/TF4iM/blob/main/festo/Mapeamento_IOs.xlsx).
+- **CODESYS Login**:
+     - Device name: `mpscontroller.local`
+     - Username: `admin`
+     - Password: `raspberry`
 
+📝 Note: CODESYS version: 3.5 SP19 (not mandatory)
+
+    
 ### 🌐 Communication 
 
 - **Protocol**: OPC UA
   
 - **Port**: 4840
+
+- **CODESYS Mapping**: `Device` -> `PLC Logic` -> `Application` -> `Symbol Configuration`
   
-- Additional info on the OPC UA setup? (**Details to be clarified❓**)
+- **Useful tool**: Prosys OPC UA Browser
+
+     - Login: `opc.tcp://mpscontroller.local:4840`
+ 
+     - Variables: `Objects` -> `DeviceSet` -> `CODESYS Control for Raspberry PI 64 SL` -> `Resources` -> `Application` -> `GlobalVars` -> `GVL`
+ 
+     - The `NodeId` variable attribute value corresponds to the name to use in 4DICA-IDE 
+
+- **Variables**: add a new OPC UA variable in CODESYS:
+  
+     - Declare variable: `Device` -> `PLC Logic` -> `Application` -> `GVL`
+     
+     - Map variable to OPC UA: `Device` -> `PLC Logic` -> `Application` -> `Symbol Configuration`
 
 ---
 
