@@ -32,11 +32,11 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 - To configure the PLC, you'll need to use **PL7 Pro** (an older Schneider IDE for Telemecanique PLCs).
 
-1. Identify the **Comm Port number (COMXX)** in the device manager.
-2. Open **PL7 Pro** and navigate to:
-   - `PLC` ➡️ `Define PLC Address` ➡️ `Options` ➡️ `Configuration of the driver` ➡️ `UNITELWAY Driver` ➡️ `Configuration`
-   - Change the port to match the **Comm Port number** from the device manager.
-3. Once connected, you can modify the settings or upload the project `.stx` file to the PLC. The project file is available [here](https://github.com/DIGI2-FEUP/TF4iM/blob/main/plc/FactorisDemoPLC.stx).
+   - 1. Identify the **Comm Port number (COMXX)** in the device manager.
+   - 2. Open **PL7 Pro** and navigate to:
+      - `PLC` ➡️ `Define PLC Address` ➡️ `Options` ➡️ `Configuration of the driver` ➡️ `UNITELWAY Driver` ➡️ `Configuration`
+      - Change the port to match the **Comm Port number** from the device manager.
+   - 3. Once connected, you can modify the settings or upload the project `.stx` file to the PLC. The project file is available [here](https://github.com/DIGI2-FEUP/TF4iM/blob/main/plc/FactorisDemoPLC.stx).
 
 ### 🌐 Communication 
 - The PLC is configured to run on `192.168.0.10`
