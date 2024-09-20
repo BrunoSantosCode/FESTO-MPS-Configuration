@@ -18,7 +18,9 @@ However, if there is an issue with the **PLC** or **Raspberry Pi**, check the co
 
 ## ⚙️ PLC Configuration
 
-### 🔲 Model: Schneider ❓❓❓
+### 🔲 Model: 
+
+Schneider ❓❓❓
 
 ### 🔐 Access
 
@@ -44,7 +46,9 @@ To configure the PLC, you'll need to use **PL7 Pro** (an older Schneider IDE for
 
 ## 🍓 Raspberry Pi Configuration
 
-### 🔲 Model: Raspberry Pi 4
+### 🔲 Model: 
+
+Raspberry Pi 4
 
 ### 🔐 Access
 - **IP**: `192.168.0.100` (This IP must be **192.168.0.100** due to PLC configuration, which whitelists MODBUS communication for this address. **Where exactly is this whitelisting configured❓**)
@@ -119,7 +123,7 @@ Open the `System Configuration` tab and build the following schematic using the 
 
 #### 2.5 Create the Main Application using the Function Blocks
 
-Open the `<workspace_name>App` tab and build your main aplication using the components added before to the Pallete, as in the example:
+Open the `<workspace_name>App` tab and build your main aplication using the components added before to the Pallete, as in the following example:
 
 ![4diac_app](https://github.com/user-attachments/assets/ef5c3480-b41e-45a0-a6a5-b69ba3656515)
 
