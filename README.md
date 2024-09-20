@@ -1,4 +1,4 @@
-# 🏭 FESTO Modular Production System (MPS) Setup Guide 
+# 🏭 FESTO Modular Production System (MPS) - Setup Guide 
 
 This guide explains how to set up and configure the FESTO MPS system.
 
