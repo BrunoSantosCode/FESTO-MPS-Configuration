@@ -75,6 +75,7 @@ This guide explains how to set up and configure the FESTO MPS system.
 ### 🔐 Access
 
 - **IP**: `192.168.0.100`
+  
      📝 Note: this IP must be `192.168.0.100` due to PLC configuration, which whitelists MODBUS communication for this address. **Where exactly is this whitelisting configured❓**)
   
 - **Alternative IP**: `10.227.17.233` or `mpscontroller.local`
