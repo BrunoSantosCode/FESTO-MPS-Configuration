@@ -6,7 +6,7 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 🏭 **FESTO MPS**  
 
-&emsp;&emsp;⬇️ Cable Connection  
+&emsp;⬇️ Cable Connection  
 
 📟 **PLC**  
 
