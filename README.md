@@ -112,13 +112,13 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 ## 🦖 Dinasore
 
-### 1. 🚀 Run Dinasore
+### 🚀 Run Dinasore
 
-#### 1.1 Add Function Blocks
+#### Add Function Blocks
 
 - Copy your function blocks (`.fbt` and `.py` files) to the Dinasore resources directory `dinasore-2.0/resources/function_blocks/`
 
-#### 1.2 Navigate to the Dinasore Directory
+#### Navigate to the Dinasore Directory
 
 - Open your terminal or command prompt and change to the Dinasore directory:
 
@@ -126,7 +126,7 @@ This guide explains how to set up and configure the FESTO MPS system.
  cd /path/to/dinasore-2.0
  ```
 
-#### 1.3 Execute Dinasore
+#### Execute Dinasore
 
 - Start the Dinasore application by running:
 
@@ -134,29 +134,29 @@ This guide explains how to set up and configure the FESTO MPS system.
  python3 core/main.py
  ```
 
-### 2. ⚙️ Configure 4DIAC-IDE
+### ⚙️ Configure 4DIAC-IDE
 
-#### 2.1 Launch Workspace
+#### Launch Workspace
 
 - Open 4DIAC-IDE and click `Launch` to launch the default workspace
 
-#### 2.2 Create a New System
+#### Create a New System
 
 - Chose `Create New System` option, then enter the `<workspace_name>` and click `Finish`
 
-#### 2.3 Create the System Configuration
+#### Create the System Configuration
 
 - Copy the function blocks (`.fbt` and `.py` files) to the 4DIAC workspace `4diac-ide-1.11/4diac-ide/workspace/<workspace_name>/<fb_folder_name>/`
 
 📝 Note: You may need to restart the 4DIAC-IDE in order to the new function blocks appear in the Pallete.
 
-#### 2.4 Create the System Configuration
+#### Create the System Configuration
 
 - Open the `System Configuration` tab and build the following schematic using the components in the Pallete:
 
 ![system_conf](https://github.com/user-attachments/assets/3a492057-6bf1-4bc0-9926-caf9315dd2d5)
 
-#### 2.5 Create the Main Application using the Function Blocks
+#### Create the Main Application using the Function Blocks
 
 - Open the `<workspace_name>App` tab and build your main aplication using the components added before to the Pallete, as in the following example:
 
@@ -168,6 +168,6 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 📝 Note: The system variables state can be seen in real time by clicking in `Debug` -> `Debug System` -> `<workspace_name>` and then right-clicking a function block -> `🔍 Watch`
 
-#### 2.6 Deploy the System
+#### Deploy the System
 
 - Deploy the system by right-clicking the `<workspace_name>` in the left tab and then click `Deploy`
