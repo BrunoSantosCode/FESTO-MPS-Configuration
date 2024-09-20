@@ -4,7 +4,7 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 ## 📌 System Overview
 
-**FESTO MPS**\tab⬅️ cable ➡️  **PLC**  ⬅️ Modbus ➡️  **Raspberry Pi (CODESYS)**  ⬅️ OPC UA ➡️  **Dinasore (4DIAC-IDE)**
+**FESTO MPS** &emsp⬅️ cable ➡️  **PLC**  ⬅️ Modbus ➡️  **Raspberry Pi (CODESYS)**  ⬅️ OPC UA ➡️  **Dinasore (4DIAC-IDE)**
 
 ---
 
