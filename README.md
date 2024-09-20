@@ -1,6 +1,6 @@
 # FESTO Modular Production System (MPS) Setup Guide 🏭
 
-This guide explains how to set up and configure the FESTO MPS system with PLC, Raspberry Pi (CODESYS), dinasore and OPC UA communication.
+This guide explains how to set up and configure the FESTO MPS system with PLC, Raspberry Pi (CODESYS), and OPC UA communication.
 
 ## System Overview
 
@@ -8,10 +8,17 @@ This guide explains how to set up and configure the FESTO MPS system with PLC, R
 
 ---
 
-## ⚙️ PLC Configuration
+## ⚡ Quick Start: Automatic Operation
 
-### Model: 
-Schneider ??? 🤔
+If everything is functioning correctly, no configuration is required! Simply **connect the factory system to power**, and everything should **run automatically**. 🎉
+
+However, if there is an issue with the **PLC** or **Raspberry Pi**, follow the configuration steps below to troubleshoot and resolve the problem.
+
+---
+
+## ⚙️ PLC Configuration (If Needed)
+
+### Model: Schneider ??? 🤔
 
 ### Access 🛠️
 The communication is established via a blue interface cable with a **DIN plug**. This cable contains an FTDI chip which requires the **CH340 Driver (USB to Serial)**. For any assistance, contact **Daniel** from I004.
@@ -38,7 +45,7 @@ To configure the PLC, you'll need to use **PL7 Pro** (an older Schneider IDE for
 
 ---
 
-## 🍓 Raspberry Pi Configuration
+## 🍓 Raspberry Pi Configuration (If Needed)
 
 ### Model: Raspberry Pi 4
 
@@ -73,5 +80,9 @@ The Raspberry Pi is configured with a **CODESYS project**. The project can be fo
 
 ---
 
+## Summary 📝
+
+- If everything is working fine, all you need to do is **connect the system to power** and it should run automatically.
+- Only use the detailed configuration steps for **PLC** and **Raspberry Pi** if there are issues with communication or operation.
+
 Feel free to reach out for any questions or clarifications! 😊
-# FESTO-MPS-Configuration
