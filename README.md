@@ -32,7 +32,7 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 ### 🔲 Model: 
 
-- Schneider (check specific model - TO BE DONE❗️)
+- Schneider
 
 
 ### 🔐 Access
