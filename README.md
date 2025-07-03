@@ -160,7 +160,7 @@ This guide explains how to set up and configure the FESTO MPS system.
  python3 core/main.py
  ```
 
-### ⚙️ Configure 4DIAC-IDE
+### ⚙️ Configure 4DIAC-IDE 1.11.0
 
 #### Launch Workspace
 
