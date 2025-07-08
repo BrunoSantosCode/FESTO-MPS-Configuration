@@ -109,7 +109,7 @@ This guide explains how to set up and configure the FESTO MPS system.
      - Username: `admin`
      - Password: `raspberry`
 
-📝 Note: CODESYS version: 3.5 SP19 (not mandatory)
+📝 Note: CODESYS version: 3.5 SP19
 
     
 ### 🌐 Communication 
