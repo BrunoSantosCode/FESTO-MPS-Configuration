@@ -104,6 +104,8 @@ This guide explains how to set up and configure the FESTO MPS system.
 
 - The Raspberry Pi is configured with a **CODESYS project**. The project can be found [here](https://github.com/DIGI2-FEUP/TF4iM/blob/main/controller/factorisDemoController.project).
 
+📝 Note: CODESYS only works for one hour, after which time the system needs to be reset (remove the white plug and reconnect).
+
 - **CODESYS Login**:
      - Device name: `mpscontroller.local`
      - Username: `admin`
